@@ -15,6 +15,29 @@ console.log("Hello! If you see this, the script is working.");
 - [ ] Remove the div with a class of footer.
 */
 
+//Select the section with an id of container without using querySelector.
+let containerElem = document.getElementById('container');
+console.log(containerElem.innerHTML);
+
+//Select the section with an id of container using querySelector.
+const containerElemQS = document.querySelector("#container");
+console.log(containerElemQS.innerHTML);
+
+//Select all of the list items with a class of "second".
+const secondClassItems = Array.from(document.getElementsByClassName("second"));
+console.log(secondClassItems[0].innerHTML);
+console.log(secondClassItems[1].innerHTML);
+
+//Select a list item with a class of third, but only the list item inside of the ol tag.
+const thirdOLItem = document.querySelectorAll('ol li.third');
+console.log(thirdOLItem[0].innerHTML);
+
+//Give the section with an id of container the text "Hello!".
+//create the text element
+const newTextElem = document.createElement("text");
+newTextElem.textContent = "Hello!"
+containerElem.appendChild(newTextElem)
+
 // Try rewriting this without using querySelector
 const header = document.querySelector("#container");
 console.log("header", header);
